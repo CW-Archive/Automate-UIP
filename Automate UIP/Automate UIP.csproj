@@ -102,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AutomateUIPRibbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutomateUIPRibbon.Designer.cs">
+      <DependentUpon>AutomateUIPRibbon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sheet1.cs">
       <DependentUpon>Automate UIP Template.xlsm</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AutomateUIPRibbon.resx">
+      <DependentUpon>AutomateUIPRibbon.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Automate UIP Template.xlsm" />
     <None Include="Automate UIP_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
