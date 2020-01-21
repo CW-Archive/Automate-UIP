@@ -81,7 +81,7 @@
             this.AddNewTradeSheet.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.AddNewTradeSheet.Label = "Add New Trade Sheet";
             this.AddNewTradeSheet.Name = "AddNewTradeSheet";
-            this.AddNewTradeSheet.OfficeImageId = "AddAccount";
+            this.AddNewTradeSheet.OfficeImageId = "CreateReportInDesignView";
             this.AddNewTradeSheet.ShowImage = true;
             this.AddNewTradeSheet.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.AddNewTradeSheet_Click);
             // 
@@ -111,7 +111,7 @@
             this.GenerateFullReport.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.GenerateFullReport.Label = "Generate Full Report";
             this.GenerateFullReport.Name = "GenerateFullReport";
-            this.GenerateFullReport.OfficeImageId = "CreateReportInDesignView";
+            this.GenerateFullReport.OfficeImageId = "ViewsReportView";
             this.GenerateFullReport.ShowImage = true;
             this.GenerateFullReport.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GenerateFullReport_Click);
             // 
