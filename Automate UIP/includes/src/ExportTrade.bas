@@ -158,7 +158,7 @@ Sub CombinePDFs(inputPathArray As Variant, outputPath As String, waitOnReturn As
         strShell = strShell & " """ & inputPathArray(i) & """"
     Next i
     
-    strShell = strShell & " -o """ & outputPath & """ -a flatten --overwrite -b one_entry_each_doc"
+    strShell = strShell & " -o """ & outputPath & """ -a flatten --overwrite -b one_entry_each_doc > """ & Application.ActiveWorkbook.Path & "\debug.txt"""
     Debug.Print strShell
     
     wsh.Run strShell, windowStyle, waitOnReturn

@@ -1,0 +1,20 @@
+Configuring Sejda 3.2.85
+Document root element "sejda", must match DOCTYPE root "null".
+Document is invalid: no grammar found.
+Starting execution with arguments: 'merge -f C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\Working Files\Template_2019-02-25.pdf -o C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\Template_2019-02-25.pdf -a flatten --overwrite -b one_entry_each_doc'
+Java version: '1.8.0_241'
+Validating parameters.
+Starting task (org.sejda.impl.sambox.MergeTask@2657cc) execution.
+Temporary output set to C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\sejdaTmp894473603331705413.tmp
+Opening C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\Working Files\Template_2019-02-25.pdf
+Adding pages
+Updating outline with policy ONE_ENTRY_EACH_DOC
+Adding outline entry for Template_2019-02-25.pdf
+Filtering annotations
+Skipped acroform merge, nothing to merge
+Task progress: 100% done
+Adding generated outline
+Moving C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\sejdaTmp894473603331705413.tmp to C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\Template_2019-02-25.pdf.
+Input documents merged correctly and written to org.sejda.model.output.FileTaskOutput@1afeb11[C:\Users\camron\code\Automate UIP\Automate UIP\Report Exports\Trades\Template\Template_2019-02-25.pdf]
+Task (org.sejda.impl.sambox.MergeTask@2657cc) executed in 0 seconds
+Completed execution
