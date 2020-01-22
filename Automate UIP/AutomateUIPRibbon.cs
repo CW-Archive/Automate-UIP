@@ -67,5 +67,10 @@ namespace Automate_UIP
         {
             Globals.ThisWorkbook.Application.Run("FeaturePending", "Settings");
         }
+
+        private void ExportCurrentTrade_Click(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisWorkbook.Application.Run("ExportCurrentTrade");
+        }
     }
 }

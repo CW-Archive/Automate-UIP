@@ -49,6 +49,7 @@
             this.UpdatePlan = this.Factory.CreateRibbonButton();
             this.UpdateWeek = this.Factory.CreateRibbonButton();
             this.SelectTakeoffFiles = this.Factory.CreateRibbonButton();
+            this.ExportCurrentTrade = this.Factory.CreateRibbonButton();
             this.OtherGroup = this.Factory.CreateRibbonGroup();
             this.Settings = this.Factory.CreateRibbonButton();
             this.AutomateUIP.SuspendLayout();
@@ -153,6 +154,7 @@
             this.TradeSheetTools.Items.Add(this.UpdatePlan);
             this.TradeSheetTools.Items.Add(this.UpdateWeek);
             this.TradeSheetTools.Items.Add(this.SelectTakeoffFiles);
+            this.TradeSheetTools.Items.Add(this.ExportCurrentTrade);
             this.TradeSheetTools.Label = "Trade Sheet Tools";
             this.TradeSheetTools.Name = "TradeSheetTools";
             // 
@@ -182,6 +184,14 @@
             this.SelectTakeoffFiles.OfficeImageId = "FileFind";
             this.SelectTakeoffFiles.ShowImage = true;
             this.SelectTakeoffFiles.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SelectTakeoffFiles_Click);
+            // 
+            // ExportCurrentTrade
+            // 
+            this.ExportCurrentTrade.Label = "Export Current Trade";
+            this.ExportCurrentTrade.Name = "ExportCurrentTrade";
+            this.ExportCurrentTrade.OfficeImageId = "ExportTextFile";
+            this.ExportCurrentTrade.ShowImage = true;
+            this.ExportCurrentTrade.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportCurrentTrade_Click);
             // 
             // OtherGroup
             // 
@@ -237,6 +247,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonSeparator separator1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup OtherGroup;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Settings;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportCurrentTrade;
     }
 
     partial class ThisRibbonCollection

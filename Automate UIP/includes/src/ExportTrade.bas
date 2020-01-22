@@ -1,10 +1,17 @@
 Attribute VB_Name = "ExportTrade"
 Option Explicit
 'Updated 2020-01-21
-Sub ExportTrade() 'sheetName As String, waitOnReturn As Boolean, suppressOverwriteExistingWarning As Boolean)
+Sub ExportCurrentTrade()
     Dim sheetName As String: sheetName = Range("R2").Value
     Dim waitOnReturn As Boolean: waitOnReturn = True
-    Dim suppressOverwriteExistingWarning As Boolean: suppressOverwriteExistingWarning = True
+    Dim suppressOverwriteExistingWarning As Boolean: suppressOverwriteExistingWarning = False
+    
+    Call ExportTrade(sheetName, waitOnReturn, suppressOverwriteExistingWarning)
+End Sub
+Sub ExportTrade(sheetName As String, waitOnReturn As Boolean, suppressOverwriteExistingWarning As Boolean)
+    'Dim sheetName As String: sheetName = Range("R2").Value
+    'Dim waitOnReturn As Boolean: waitOnReturn = True
+    'Dim suppressOverwriteExistingWarning As Boolean: suppressOverwriteExistingWarning = True
     '''''''''''''''''''''''''''''''''''
     Dim tradeFolder As String
     Dim workingFolder As String
@@ -50,9 +57,9 @@ Sub ExportTrade() 'sheetName As String, waitOnReturn As Boolean, suppressOverwri
             r = MsgBox("Would you like to overwrite " & combineFileName & "?", vbYesNo + vbCritical, "Are you sure?")
             If r = vbYes Then
                 Kill combineFileName
-                r = ""
+                r = 0
                 Else
-                r = ""
+                r = 0
                 Exit Sub
             End If
         End If
