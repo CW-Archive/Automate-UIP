@@ -2,7 +2,7 @@ Attribute VB_Name = "ExportTrade"
 Option Explicit
 'Updated 2020-01-21
 Sub ExportCurrentTrade()
-    Dim sheetName As String: sheetName = Range("R2").Value
+    Dim sheetName As String: sheetName = Range("R2").Value ' Change this if the sheet name moves
     Dim waitOnReturn As Boolean: waitOnReturn = True
     Dim suppressOverwriteExistingWarning As Boolean: suppressOverwriteExistingWarning = False
     
