@@ -22,4 +22,5 @@ Sub SelectTradeTakeoffFiles()
     
     'TODO:  Set the string to a range on the trade sheet
     'Range("R2").Value = filesString
+    MsgBox "update the range value   ----    " & filesString
 End Sub

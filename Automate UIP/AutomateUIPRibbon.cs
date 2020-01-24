@@ -55,7 +55,7 @@ namespace Automate_UIP
 
         private void SelectTakeoffFiles_Click(object sender, RibbonControlEventArgs e)
         {
-            Globals.ThisWorkbook.Application.Run("FeaturePending", "Select Takeoff Files");
+            Globals.ThisWorkbook.Application.Run("SelectTradeTakeoffFiles");
         }
 
         private void Settings_Click(object sender, RibbonControlEventArgs e)
