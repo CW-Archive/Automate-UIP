@@ -42,9 +42,9 @@
             this.ExportSubReports = this.Factory.CreateRibbonButton();
             this.GenerateFullReport = this.Factory.CreateRibbonButton();
             this.UpdateGroup = this.Factory.CreateRibbonGroup();
-            this.OpenQuantityLinkFile = this.Factory.CreateRibbonButton();
-            this.RefreshQuantityLinks = this.Factory.CreateRibbonSplitButton();
+            this.OpenQuantityLinkFile = this.Factory.CreateRibbonSplitButton();
             this.UpdatePathtoQuantityLinkFile = this.Factory.CreateRibbonButton();
+            this.RefreshQuantityLinks = this.Factory.CreateRibbonButton();
             this.TradeSheetTools = this.Factory.CreateRibbonGroup();
             this.UpdatePlan = this.Factory.CreateRibbonButton();
             this.UpdateWeek = this.Factory.CreateRibbonButton();
@@ -126,20 +126,11 @@
             // OpenQuantityLinkFile
             // 
             this.OpenQuantityLinkFile.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.OpenQuantityLinkFile.Items.Add(this.UpdatePathtoQuantityLinkFile);
             this.OpenQuantityLinkFile.Label = "Open Quantity Link File";
             this.OpenQuantityLinkFile.Name = "OpenQuantityLinkFile";
             this.OpenQuantityLinkFile.OfficeImageId = "HeaderFooterFilePathInsert";
-            this.OpenQuantityLinkFile.ShowImage = true;
-            this.OpenQuantityLinkFile.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OpenQuantityLinkFile_Click);
-            // 
-            // RefreshQuantityLinks
-            // 
-            this.RefreshQuantityLinks.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.RefreshQuantityLinks.Items.Add(this.UpdatePathtoQuantityLinkFile);
-            this.RefreshQuantityLinks.Label = "Refresh Quantity Links";
-            this.RefreshQuantityLinks.Name = "RefreshQuantityLinks";
-            this.RefreshQuantityLinks.OfficeImageId = "Refresh";
-            this.RefreshQuantityLinks.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.RefreshQuantityLinks_Click);
+            this.OpenQuantityLinkFile.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OpenQuantityLinkFile_Click_1);
             // 
             // UpdatePathtoQuantityLinkFile
             // 
@@ -148,6 +139,15 @@
             this.UpdatePathtoQuantityLinkFile.OfficeImageId = "FileFind";
             this.UpdatePathtoQuantityLinkFile.ShowImage = true;
             this.UpdatePathtoQuantityLinkFile.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.UpdatePathtoQuantityLinkFile_Click);
+            // 
+            // RefreshQuantityLinks
+            // 
+            this.RefreshQuantityLinks.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.RefreshQuantityLinks.Label = "Refresh Quantity Links";
+            this.RefreshQuantityLinks.Name = "RefreshQuantityLinks";
+            this.RefreshQuantityLinks.OfficeImageId = "Refresh";
+            this.RefreshQuantityLinks.ShowImage = true;
+            this.RefreshQuantityLinks.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.RefreshQuantityLinks_Click_1);
             // 
             // TradeSheetTools
             // 
@@ -178,7 +178,6 @@
             // 
             // SelectTakeoffFiles
             // 
-            this.SelectTakeoffFiles.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.SelectTakeoffFiles.Label = "Select Takeoff Files";
             this.SelectTakeoffFiles.Name = "SelectTakeoffFiles";
             this.SelectTakeoffFiles.OfficeImageId = "FileFind";
@@ -234,9 +233,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup CreateGroup;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton AddNewTradeSheet;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup UpdateGroup;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton OpenQuantityLinkFile;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton GenerateFullReport;
-        internal Microsoft.Office.Tools.Ribbon.RibbonSplitButton RefreshQuantityLinks;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton UpdatePathtoQuantityLinkFile;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup TradeSheetTools;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton UpdatePlan;
@@ -248,6 +245,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup OtherGroup;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Settings;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportCurrentTrade;
+        internal Microsoft.Office.Tools.Ribbon.RibbonSplitButton OpenQuantityLinkFile;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton RefreshQuantityLinks;
     }
 
     partial class ThisRibbonCollection

@@ -28,14 +28,9 @@ namespace Automate_UIP
             Globals.ThisWorkbook.Application.Run("FeaturePending", "Generate Full Report");
         }
 
-        private void RefreshQuantityLinks_Click(object sender, RibbonControlEventArgs e)
-        {
-            Globals.ThisWorkbook.Application.Run("FeaturePending", "Refresh Quantity Links");
-        }
-
         private void UpdatePathtoQuantityLinkFile_Click(object sender, RibbonControlEventArgs e)
         {
-            Globals.ThisWorkbook.Application.Run("FeaturePending", "Update Path to Quantity Link File");
+            Globals.ThisWorkbook.Application.Run("SelectQuantityLinkFile");
         }
 
         private void UpdatePlan_Click(object sender, RibbonControlEventArgs e)
@@ -65,12 +60,22 @@ namespace Automate_UIP
 
         private void Settings_Click(object sender, RibbonControlEventArgs e)
         {
-            Globals.ThisWorkbook.Application.Run("FeaturePending", "Settings");
+            Globals.ThisWorkbook.Application.Run("OpenSettings");
         }
 
         private void ExportCurrentTrade_Click(object sender, RibbonControlEventArgs e)
         {
             Globals.ThisWorkbook.Application.Run("ExportCurrentTrade");
+        }
+
+        private void RefreshQuantityLinks_Click_1(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisWorkbook.Application.Run("RefreshLinks");
+        }
+
+        private void OpenQuantityLinkFile_Click_1(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisWorkbook.Application.Run("OpenQuantityLinkFile");
         }
     }
 }
