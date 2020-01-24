@@ -1,5 +1,5 @@
 Attribute VB_Name = "OtherTrade"
-Sub SelectTakeoffTrade()
+Sub SelectTradeTakeoffFiles()
     Dim fileToOpen As Variant
     Dim wbLocation As String
     Dim filesString As String
@@ -21,5 +21,5 @@ Sub SelectTakeoffTrade()
     filesString = Right(filesString, Len(filesString) - 4)
     
     'TODO:  Set the string to a range on the trade sheet
-    Range("R2").Value = filesString
+    'Range("R2").Value = filesString
 End Sub
